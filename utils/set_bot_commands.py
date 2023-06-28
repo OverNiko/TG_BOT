@@ -9,6 +9,6 @@ async def set_default_commands(dp):
             types.BotCommand("cancel", "Отменить действие " + emoji.emojize(':cross_mark:')),
             types.BotCommand("help", "Вывести справку " + emoji.emojize(':bookmark_tabs:')),
             types.BotCommand("pogoda", "Узнать погоду " + emoji.emojize(':sun:')),
-            # types.BotCommand("reminder", "Создать напоминание " + emoji.emojize(':envelope_with_arrow:')),
+            types.BotCommand("gpt", "Задай свои вопросы Chat GPT-3 " + emoji.emojize(':robot:')),
         ]
     )

@@ -48,5 +48,5 @@ async def process_gpt_text(message: types.Message, state: FSMContext):
             generated_text = response.choices[0].text
             await message.reply(generated_text)
         except Exception as e:
-            await message.reply("Произошла ошибка при генерации текста.")
+            await message.reply("Произошла ошибка при генерации текста, воспользуйтесь функцией позже. Чтобы закончить общение, используй команду /cancel.")
         await GPTConversation.waiting_for_text.set()

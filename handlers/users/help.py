@@ -13,6 +13,7 @@ async def bot_help(message: types.Message):
             "/cancel - Отменить действие " + emoji.emojize(':cross_mark:'),
             "/help - Вывести справку " + emoji.emojize(':bookmark_tabs:'),
             "/pogoda - Узнать погоду " + emoji.emojize(':sun:'),
+            "/gpt - Задай свои вопросы Chat GPT-3 " + emoji.emojize(':robot:'),
             )
     
     await message.answer("\n".join(text))
