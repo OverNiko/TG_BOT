@@ -1,21 +1,15 @@
-import json
-import string
-
 from aiogram import types
 from aiogram.dispatcher import FSMContext
+
 from loader import dp
 
 
 # Эхо хендлер, куда летят текстовые сообщения без указанного состояния
 @dp.message_handler(state=None)
 async def bot_echo(message: types.Message):
-    if {i.lower().translate(str.maketrans("", "", string.punctuation)) for i in message.text.split(" ")}\
-        .intersection(set(json.load(open("C:\\Users\\Slai1\\Desktop\\Tg_Bot\\Bot v2\\cenz.json")))) != set():
-        await message.reply("Маты запрещены!")
-        await message.delete()
-    else:    
-        await message.answer(f"Сообщение:\n"
-                             f"{message.text}")
+    await message.answer(f"Эхо без состояния."
+                         f"Сообщение:\n"
+                         f"{message.text}")
 
 
 # Эхо хендлер, куда летят ВСЕ сообщения с указанным состоянием

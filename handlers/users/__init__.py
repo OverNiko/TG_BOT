@@ -1,2 +1,3 @@
-from . import cancel, echo, help, pars_os, pogoda, start
-from .reminder import reminder
+from . import help
+from . import start
+from . import echo
