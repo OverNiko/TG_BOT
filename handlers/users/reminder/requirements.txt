@@ -1,5 +1,0 @@
-rutimeparser==1.1.1
-DateTime==4.3
-telebot==0.0.3
-pyTelegramBotAPI==3.6.6
-pytz==2019.2

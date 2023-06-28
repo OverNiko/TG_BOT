@@ -13,6 +13,6 @@ async def bot_help(message: types.Message):
             "/cancel - Отменить действие " + emoji.emojize(':cross_mark:'),
             "/help - Вывести справку " + emoji.emojize(':bookmark_tabs:'),
             "/pogoda - Узнать погоду " + emoji.emojize(':sun:'),
-            "/reminder - создать напоминание " + emoji.emojize(':envelope_with_arrow:'),)
+            )
     
     await message.answer("\n".join(text))
