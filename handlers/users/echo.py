@@ -11,8 +11,8 @@ from loader import dp
 @dp.message_handler(state=None)
 async def bot_echo(message: types.Message):
     if {i.lower().translate(str.maketrans("", "", string.punctuation)) for i in message.text.split(" ")}\
-        .intersection(set(json.load(open("cenz.json")))) != set():
-        await message.reply("Маты запрещены!")
+        .intersection(set(json.load(open("D:\\Programming\\Python\\Python\\Bots\\Tg_Bots\\TG_BOT\\TG_BOT\\handlers\\users\\cenz.json")))) != set():
+        await message.reply("Веди себя прилично!")
         await message.delete()
     else:
         await message.answer(f"Копирую:\n"
