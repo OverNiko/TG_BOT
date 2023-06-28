@@ -1,7 +1,6 @@
 import emoji
 from aiogram import types
 from aiogram.dispatcher import FSMContext
-from aiogram.dispatcher.filters.builtin import CommandPogoda
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from loader import dp
 from pyowm import OWM
@@ -11,7 +10,7 @@ from pyowm.utils.config import get_default_config
 class Form(StatesGroup):
     gorod = State()
 
-@dp.message_handler(CommandPogoda())
+@dp.message_handler(commands="pogoda")
 @dp.message_handler(commands=["Узнать_погоду" + emoji.emojize(':sun:')])
 async def bot_pogoda(message: types.Message):
     await Form.gorod.set()
