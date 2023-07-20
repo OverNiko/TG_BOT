@@ -130,4 +130,4 @@ dmypy.json
 .idea/*
 .env
 
-**/pars_os.py
+pars_os.py
