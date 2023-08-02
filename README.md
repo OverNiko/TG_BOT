@@ -8,3 +8,5 @@ It implements functions like
 3. Weather - you can find out the weather in any place, wherever you are :);
 4. ChatGPT - chat with ChatGPT directly from Telegram chat :);
 5. Cancel - cancel certain interactions with the Telegram bot, e.g. stop chatting with ChatGPT.
+
+![image](https://github.com/OverNiko/TG_BOT/assets/87976789/eae45c85-69a9-472b-b0cb-0025c9aaa527)
